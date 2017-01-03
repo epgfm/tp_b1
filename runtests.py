@@ -38,7 +38,10 @@ targets = [
     ("get_complement", get_complement),
     ("get_complement_sequence", get_complement_sequence),
     ("get_number_from_letter", get_number_from_letter),
-    ("get_letter_from_number", get_letter_from_number)
+    ("get_letter_from_number", get_letter_from_number),
+    ("shift_mod26", shift_mod26),
+    ("encrypt_char", encrypt_char),
+    ("encrypt_string", encrypt_string)
 ]
 
 print "=" * 79
@@ -64,12 +67,6 @@ for fname, f in targets:
 
     del __test__[fname]
 
-    if fname == "updateGrid":
-        print "-> You can now test main_v1.py"
-    elif fname == "doCmd":
-        print "-> You can now write main_v2.py"
-    elif fname == "updateGrids":
-        print "-> You can now write main_v3.py"
 
 print "=" * 79
 

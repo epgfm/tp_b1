@@ -173,6 +173,7 @@ def get_number_from_letter(c):
     
 
 
+
 def get_letter_from_number(n):
     ''' (int) -> str
 
@@ -189,13 +190,47 @@ def get_letter_from_number(n):
 
 
 
-def shift_26(n, shift):
+def shift_mod26(n, shift):
     ''' (int) -> int
 
-    Return n shifted by 
+    Return n shifted by "shift" in the [0-25] space
 
+    >>> shift_mod26(0, 2)
+    2
+    >>> shift_mod26(25, 2)
+    1
+    >>> shift_mod26(1, 4)
+    5
     '''
+    
 
+
+
+def encrypt_char(c, shift):
+    ''' (str) -> str
+
+    Return an encrypted version of char "c" : it is shifted by "shift" places.
+
+    >>> encrypt_char('A', 1)
+    'B'
+    >>> encrypt_char('A', 2)
+    'C'
+    >>> encrypt_char('Z', 2)
+    'B'
+    '''
+    
+
+
+
+def encrypt_string(s, shift):
+    ''' (str) -> str
+
+    >>> encrypt_string("TEST", 1)
+    'UFTU'
+    >>> encrypt_string("THIS IS A TEST", 1)
+    'UIJT JT B UFTU'
+    '''
+    
 
 
 
